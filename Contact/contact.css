@@ -1,37 +1,132 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Oswald", sans-serif;
 }
 
 .full-page {
-    position: relative;
-    overflow: hidden;
-    z-index: 1;
-    height: 100vh; /* Set the height of the container */
-
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+  height: 100vh; /* Set the height of the container */
 }
 
 .full-page::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100vh;
-    background: url('moon1.jpg') no-repeat 100%;
-    background-size: cover;
-    filter: brightness(0.25);
-    z-index: -1; /* Move the pseudo-element behind the content */
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background: url("moon1.jpg") no-repeat 100%;
+  background-size: cover;
+  filter: brightness(0.1);
+  z-index: -1; /* Move the pseudo-element behind the content */
 }
-.full-page img{
-    position: absolute;
-    bottom: 200px;
-    z-index: 100;
-    height: 250px;
-filter: none;
+.full-page > img {
+  position: absolute;
+  bottom: 200px;
+  z-index: 100;
+  height: 250px;
+  filter: none;
+  right: 100px;
 }
-.full-page iframe{
-    position: relative;
-    z-index: 10000;
+
+.down {
+  height: 50vh;
+  width: 80%;
+  margin-left: 10%;
+  margin-top: 30vh;
+  display: flex;
+}
+.full-page .down .left-div,
+.full-page .down .right-div {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-around;
+}
+.full-page .down .left-div .left,
+.full-page .down .right-div .right {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  align-items: start;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.left img {
+  height: 250px;
+}
+.left h2 {
+  margin-top: 10px;
+  color: #d3bebe;
+  font-size: 16px;
+  text-transform: uppercase;
+}
+
+.right input {
+  background-color: rgba(16, 16, 16, 255);
+  border: 1px solid rgb(139, 127, 127);
+  height: 45px;
+  width: 250px;
+  font-weight: 500;
+}
+.right textarea {
+  background-color: rgba(16, 16, 16, 255);
+  border: 1px solid rgb(139, 127, 127);
+  height: 60px;
+  resize: none;
+  width: 250px;
+  font-weight: 500;
+}
+
+input:focus ~ .floating-label,
+input:not(:focus):valid ~ .floating-label,
+textarea:focus ~ .floating-label,
+textarea:not(:focus):valid ~ .floating-label {
+  top: -15px;
+  bottom: 10px;
+  left: 20px;
+  font-size: 11px;
+  opacity: 1;
+  color: #d3bebe;
+}
+
+.inputText {
+  font-size: 14px;
+  width: 200px;
+  height: 35px;
+  position: relative;
+  color: #d3bebe;
+  padding-left: 20px;
+}
+
+.cont {
+  position: relative;
+}
+
+.floating-label {
+  position: absolute;
+  pointer-events: none;
+  text-transform: uppercase;
+  font-weight: 600;
+  left: 20px;
+  top: 14px;
+  transition: 0.2s ease all;
+  color: #d3bebe;
+}
+
+.right button {
+  width: 250px;
+  height: 45px;
+  font-size: 16px;
+  font-weight: 600;
+  background-color: #d3bebe;
+  cursor: pointer;
+  border: 0px;
 }
