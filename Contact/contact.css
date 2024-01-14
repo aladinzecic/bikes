@@ -24,13 +24,23 @@
   filter: brightness(0.1);
   z-index: -1; /* Move the pseudo-element behind the content */
 }
-.full-page > img {
+#img1 {
   position: absolute;
   bottom: 200px;
   z-index: 100;
   height: 250px;
   filter: none;
-  right: 100px;
+  right: 60px;
+  filter: brightness(0.6);
+
+}
+#img2 {
+  position: absolute;
+  bottom: 200px;
+  z-index: 100;
+  height: 150px;
+  filter: brightness(0.3);
+  right: 40px;
 }
 
 .down {
@@ -115,6 +125,7 @@ textarea:not(:focus):valid ~ .floating-label {
   pointer-events: none;
   text-transform: uppercase;
   font-weight: 600;
+  font-size: 14px;
   left: 20px;
   top: 14px;
   transition: 0.2s ease all;
