@@ -35,6 +35,8 @@
 .frame {
   justify-content: start;
   background: url(./frame.jpg) no-repeat;
+  background-size: 25%;
+
   background-position: 25% 70%;
   background-color: black;
   align-items: center;
@@ -92,8 +94,10 @@
 
 .wheel{
     height: 100vh;
-    background: url(./wheel.jpg) no-repeat;
-    background-position: 75% 100px;
+    background:url(./wheel.jpg) no-repeat;
+    background-size: 25%;
+
+    background-position: 75% 200px;
     background-color: black;
 }
 .wheel h1{
@@ -104,11 +108,16 @@
     width: 60%;
     margin-left: auto;
 }
-
+#blob{
+  width: 25%;
+  position: absolute;
+  right: 100px;
+  top: 520px;
+}
 
 .handlebar{
     background: url(./handlebar.png) no-repeat;
-    background-size: 45%;
+    background-size: 35%;
     background-position: 25% 50%;
     background-color: black;
     align-items: center;
