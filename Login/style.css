@@ -16,10 +16,10 @@
 }
 .hero svg {
   position: absolute;
-  bottom: 0;
+  bottom: -10px;
 }
 .hero svg:nth-child(2) {
-  bottom: -60px;
+  bottom: -20px;
 }
 
 .center {
@@ -90,7 +90,6 @@ textarea:not(:focus):valid ~ .floating-label {
 .floating-label {
   position: absolute;
   pointer-events: none;
-  text-transform: uppercase;
   font-weight: 600;
   font-size: 18px;
   left: 20px;

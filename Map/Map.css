@@ -1,0 +1,38 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+#map {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    top: 0;
+    z-index: 0;
+    height: 100vh;
+  }
+.search{
+    position: absolute;
+    top: 40px;
+    right: 40px;
+    width: 25vw;
+    height: 40px;
+    z-index: 101;
+}
+.search input{
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    border: 0px;
+    border-bottom: 2px solid white;
+    padding-left: 20px;
+    color: #fff;
+}
+.search input:focus{
+    outline: none;
+}
+.search input::placeholder{
+    color: rgb(85, 80, 80);
+}
