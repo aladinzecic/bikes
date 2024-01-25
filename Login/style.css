@@ -46,7 +46,9 @@
   border: 1px solid gray;
   height: 40px;
   border-radius: 3px;
+
 }
+
 .center button{
   width: 100%;
   background-color: #12b7d4;
@@ -65,7 +67,7 @@ input:focus ~ .floating-label,
 input:not(:focus):valid ~ .floating-label,
 textarea:focus ~ .floating-label,
 textarea:not(:focus):valid ~ .floating-label {
-  top: -20px;
+  top: -15px;
   /* bottom: 10px; */
   left: 20px;
   font-size: 14px;

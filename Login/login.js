@@ -1,28 +1,10 @@
-const emailEl = document.getElementById('email');
+const usernameEl = document.getElementById('username');
 const emailRegex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
-const emailValidationMessageDiv  = document.getElementById('emailValidationMessage');
+const usernameValidationMessageDiv  = document.getElementById('usernameValidationMessage');
 let isEmailFocused = false;
-let emailValue = '';
-
-emailEl.addEventListener('focus', () => {
-    isEmailFocused = true;
-});
-
-emailEl.addEventListener('blur', () => {
-    isEmailFocused = false;
-  emailValidationMessageDiv.innerHTML = '';
-
-  if (!emailRegex.test(emailValue) && !isEmailFocused&&emailValue!="") {
-    const newh4 = document.createElement("h4");
-    newh4.style.color='red'
-    newh4.style.fontSize='16px'
-    newh4.innerText = 'The entered email address is not valid';
-    emailValidationMessageDiv.appendChild(newh4);
-  }
-  });
-
-emailEl.addEventListener('input', () => {
-  emailValue = emailEl.value;
+let usernameValue = '';
+usernameEl.addEventListener('input', () => {
+  usernameValue = usernameEl.value;
 
 });
 
@@ -54,33 +36,45 @@ function validatePassword(password) {
   return messages;
 }
 
-
-const validationMessages = validatePassword(passwordValue);
-
-if (validationMessages.length !== 0) {
-  console.log("Lozinka nije validna.");
-}
-
-
-
-passwordEl.addEventListener('focus', () => {
-    isFocused = true;
+  
+    passwordEl.addEventListener('input', () => {
+    passwordValue = passwordEl.value;
   });
   
-  passwordEl.addEventListener('blur', () => {
+
+  const btn=document.getElementById('btn')
+  btn.addEventListener('click',()=>{
+    usernameValidationMessageDiv.innerHTML = '';
+    if (!lengthRegex.test(usernameValue)) {
+      const newh4 = document.createElement("h4");
+      newh4.style.color='red'
+      newh4.style.fontSize='16px'
+      newh4.innerText = 'Username must be longer than 5 characters';
+      usernameValidationMessageDiv.appendChild(newh4);
+    }
+    else if(localStorage.getItem(usernameValue)){
+      const newh4 = document.createElement("h4");
+      newh4.style.color='red'
+      newh4.style.fontSize='16px'
+      newh4.innerText = 'This username already exists';
+      usernameValidationMessageDiv.appendChild(newh4);
+    }
+
     const msgs=validatePassword(passwordValue)
-    isFocused = false;
     passwordValidationMessageDiv.innerHTML = '';
-    if (msgs && !isPasswordFocused) {
+    if (msgs.length) {
       const newh4 = document.createElement("h4");
       newh4.style.color='red'
       newh4.style.fontSize='16px'
       newh4.innerText =msgs[0]? msgs[0]:'';
       passwordValidationMessageDiv.appendChild(newh4);
     }
-    });
-  
-    passwordEl.addEventListener('input', () => {
-    passwordValue = passwordEl.value;
-  });
-  
+    if(!msgs.length&&passwordValue!==""&&lengthRegex.test(usernameValue)&&!localStorage.getItem(usernameValue)){
+      localStorage.setItem(usernameValue,JSON.stringify({
+        username:usernameValue,
+        password:passwordValue
+      }))
+    }
+  })
+
+  console.log(localStorage.getItem('asdfghj'))
