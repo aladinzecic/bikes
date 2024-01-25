@@ -1,7 +1,6 @@
 const usernameEl = document.getElementById('username');
 const emailRegex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
 const usernameValidationMessageDiv  = document.getElementById('usernameValidationMessage');
-let isEmailFocused = false;
 let usernameValue = '';
 usernameEl.addEventListener('input', () => {
   usernameValue = usernameEl.value;
@@ -12,7 +11,6 @@ usernameEl.addEventListener('input', () => {
 
 const passwordEl = document.getElementById('password');
 const passwordValidationMessageDiv  = document.getElementById('passwordValidationMessage');
-let isPasswordFocused = false;
 let passwordValue = '';
 const lengthRegex = /^.{6,}$/;
 const uppercaseRegex = /[A-Z]/;
@@ -70,11 +68,26 @@ function validatePassword(password) {
       passwordValidationMessageDiv.appendChild(newh4);
     }
     if(!msgs.length&&passwordValue!==""&&lengthRegex.test(usernameValue)&&!localStorage.getItem(usernameValue)){
-      localStorage.setItem(usernameValue,JSON.stringify({
-        username:usernameValue,
-        password:passwordValue
-      }))
+      localStorage.setItem(usernameValue,passwordValue)
+      passwordEl.value=""
+      usernameEl.value=""
+      Toastify({
+        text: "Account created succesfully",
+        duration: 3000,
+        destination: "https://github.com/apvarun/toastify-js",
+        newWindow: true,
+        close: true,
+        gravity: "bottom", // `top` or `bottom`
+        position: "right", // `left`, `center` or `right`
+        stopOnFocus: true, // Prevents dismissing of toast on hover
+        style: {
+          background: "#12b7d4",
+        },
+        onClick: function(){} // Callback after click
+      }).showToast();
+      setInterval(()=>{
+window.location.href = '../Login/Login.html';
+      },2000)
     }
   })
 
-  console.log(localStorage.getItem('asdfghj'))
