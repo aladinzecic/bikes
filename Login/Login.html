@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <link rel="stylesheet" href="style.css" />
+    <script src="./login.js" defer></script>
   </head>
   <body>
     <div class="hero">
@@ -12,12 +13,16 @@
             <h1>Sign In</h1>
             <h3>Let's join us</h3>
             <div class="cont">
-                <input type="email" class="inputText" required />
+                <input type="text" class="inputText" id="email" required/>
                 <span class="floating-label">Email</span>
+                <div id="emailValidationMessage"></div>
+
               </div>        
             <div class="cont">
-                <input type="password" class="inputText" required />
+                <input type="password" class="inputText" id="password"  required />
                 <span class="floating-label">Password</span>
+                <div id="passwordValidationMessage"></div>
+
               </div>    
               <button type="submit">Log In</button>
             </div>
