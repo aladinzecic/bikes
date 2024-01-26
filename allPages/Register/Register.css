@@ -99,3 +99,57 @@ textarea:not(:focus):valid ~ .floating-label {
   transition: 0.2s ease all;
   color: #d3bebe;
 }
+
+
+
+
+
+
+@media (max-width:1000px){
+  .center {
+    width: 50%;
+  }
+  .center input{
+    width: 90%;
+    margin-left: 5%;
+  }
+  .center button{
+    width: 90%;
+    margin-left: 5%;
+
+  }
+  
+  .hero svg {
+    position: absolute;
+    bottom: 00px;
+  }
+  .hero svg:nth-child(2) {
+    bottom: 0px;
+  }
+  .floating-label {
+    left: 40px;
+  }
+  input:focus ~ .floating-label,
+  input:not(:focus):valid ~ .floating-label,
+  textarea:focus ~ .floating-label,
+  textarea:not(:focus):valid ~ .floating-label {
+    left: 40px;
+  }
+  #passwordValidationMessage,#usernameValidationMessage{
+    margin-left: 5%;
+  }
+}
+
+@media (max-width:580px){
+  .center {
+    width: 60%;
+  }
+}
+@media (max-width:480px){
+  .center h1 {
+    font-size: 34px;
+  }
+  .center {
+    width: 65%;
+  }
+}
