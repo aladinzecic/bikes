@@ -27,6 +27,12 @@ body {
   display: flex;
 justify-content: center;  align-items: center;
 }
+.hero-right img{
+  transform: scale(0.8);
+}
+#diff{
+  font-weight: 800;
+}
 #second {
 font-weight: 800;
 margin-top: 25px;
@@ -61,6 +67,7 @@ font-size: 34px;
 .between h1 {
   color: #000;
   font-size: 44px;
+  font-weight: 300;
 }
 .green {
   width: 5px;

@@ -1,5 +1,6 @@
 {
   "dependencies": {
+    "jssha": "^3.3.1",
     "toastify-js": "^1.12.0"
   }
 }

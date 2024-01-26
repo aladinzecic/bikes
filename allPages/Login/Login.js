@@ -1,3 +1,13 @@
+const hash = (text) =>
+{
+    const hashObj = new jsSHA("SHA-512","TEXT",{numRounds: 1});
+    hashObj.update(text);
+    const hash = hashObj.getHash("HEX");
+    return hash;
+}
+
+
+
 const usernameEl = document.getElementById('username');
 let usernameValue = '';
 
@@ -28,7 +38,7 @@ usernameEl.addEventListener('input', () => {
       newh4.innerText = `This username doesn't exists`;
       usernameValidationMessageDiv.appendChild(newh4);
     }
-    else if(passwordValue!==localStorage.getItem(usernameValue)){
+    else if(hash(passwordValue)!==localStorage.getItem(usernameValue)){
         usernameValidationMessageDiv.innerText=""
         passwordValidationMessageDiv.innerText=""
         const newh4 = document.createElement("h4");

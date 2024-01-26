@@ -1,3 +1,12 @@
+
+const hash = (text) =>
+{
+    const hashObj = new jsSHA("SHA-512","TEXT",{numRounds: 1});
+    hashObj.update(text);
+    const hash = hashObj.getHash("HEX");
+    return hash;
+}
+
 const usernameEl = document.getElementById('username');
 const emailRegex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
 const usernameValidationMessageDiv  = document.getElementById('usernameValidationMessage');
@@ -68,7 +77,7 @@ function validatePassword(password) {
       passwordValidationMessageDiv.appendChild(newh4);
     }
     if(!msgs.length&&passwordValue!==""&&lengthRegex.test(usernameValue)&&!localStorage.getItem(usernameValue)){
-      localStorage.setItem(usernameValue,passwordValue)
+      localStorage.setItem(usernameValue,hash(passwordValue))
       passwordEl.value=""
       usernameEl.value=""
       Toastify({
