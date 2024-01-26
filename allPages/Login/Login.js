@@ -5,6 +5,7 @@ const hash = (text) =>
     const hash = hashObj.getHash("HEX");
     return hash;
 }
+let users=[]
 
 
 
@@ -28,7 +29,8 @@ usernameEl.addEventListener('input', () => {
 
   const btn=document.getElementById('btn')
   btn.addEventListener('click',()=>{
-      if(!localStorage.getItem(usernameValue)){
+    const user=users.find(user=>user.username===usernameValue)
+      if(!user){
         usernameValidationMessageDiv.innerText=""
         const newh4 = document.createElement("h4");
         newh4.style.color='red'
@@ -38,7 +40,7 @@ usernameEl.addEventListener('input', () => {
       newh4.innerText = `This username doesn't exists`;
       usernameValidationMessageDiv.appendChild(newh4);
     }
-    else if(hash(passwordValue)!==localStorage.getItem(usernameValue)){
+    else if(hash(passwordValue)!==user.password){
         usernameValidationMessageDiv.innerText=""
         passwordValidationMessageDiv.innerText=""
         const newh4 = document.createElement("h4");
@@ -56,3 +58,28 @@ usernameEl.addEventListener('input', () => {
         document.location.href='../MainPage/MainPage.html'
     }
 })
+
+
+
+
+
+// login.js
+
+document.addEventListener("DOMContentLoaded", function () {
+  fetch("podaci.json")
+    .then(response => {
+      if (!response.ok) {
+        throw new Error(`Network response was not ok: ${response.status}`);
+      }
+      return response.json();
+    })
+    .then(data => {
+      // Use the JSON data here
+      console.log(data.users);
+      users=data.users
+
+    })
+    .catch(error => {
+      console.error('There was a problem with the fetch operation:', error);
+    });
+});

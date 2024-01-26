@@ -1,83 +1,111 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <link rel="stylesheet" href="MainPage.css" />
-  </head>
-  <body>
-    <div class="hero">
-      <div class="hero-left">
-        <h1>Explore your city on two</h1>
-        <h1 id="second"> wheels with PedalNow</h1>
-        <h3>
-          your go-to destination for convenient <br> and eco-friendly bike rentals.
-        </h3>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PedalNow</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="MainPage.css">
+</head>
+<body class="bg-dark text-white">
+  <div class="container-fluid">
+    <div class="row hero">
+      <div class="col-md-6 hero-left text-center">
+        <h1 class="display-4 font-weight-bold">Explore your city on two wheels with PedalNow</h1>
+        <h3 class="lead">Your go-to destination for convenient and eco-friendly bike rentals.</h3>
       </div>
-      <div class="hero-right">
-        <img src="bycicle1.png" alt="" />
-        <img src="young-modern-woman-riding-bicycle-600nw-1971529970-removebg-preview.png" alt="" />
-      </div>
-    </div>
-    <div class="between">
-      <h1>PEDALNOW</h1>
-      <h1 id="diff">PEDALNOW</h1>
-      <h1>PEDALNOW</h1>
-      <h1 id="diff">PEDALNOW</h1>
-    </div>
-    <div class="all">
-      <div class="left">
-        <div class="box box1"><img src="./login.png" alt="" srcset="" /></div>
-        <div class="box box2">
-          <div class="circle">2</div>
-          <h1>Bike Reservation</h1>
-          <h3>
-            Bike reservation made simple. Locate available bikes, select your
-            preferred model, and reserve it through our user-friendly platform.
-          </h3>
-        </div>
-        <div class="box box3"><img src="./unlock.png" alt="" srcset="" /></div>
-        <div class="box box4">
-          <div class="circle">4</div>
-          <h1>Cycling and Bike Return</h1>
-          <h3>
-            Unlock your bike, embark on your journey, and conveniently return it
-            to any designated station when you're done.
-          </h3>
-        </div>
-        <div class="box box5"><img src="./paying.png" alt="" srcset="" /></div>
-      </div>
-      <div class="center"><div class="line"></div></div>
-      <div class="right">
-        <div class="box box6">
-          <div class="circle">1</div>
-          <h1>Sign up process</h1>
-          <h3>
-            Simply create an account, and you'll be ready to explore our
-            bike-sharing service in no time.
-          </h3>
-        </div>
-        <div class="box box7"><img src="./map1.webp" alt="" /></div>
-        <div class="box box8">
-          <div class="circle">3</div>
-          <h1>Starting Your Ride</h1>
-          <h3>
-            Unlock your reserved bike using our app or a provided code, and
-            enjoy the freedom of cycling through the city.
-          </h3>
-        </div>
-        <div class="box box9"><img src="./bycicle.png" alt="" srcset="" /></div>
-        <div class="box box10">
-          <div class="circle">5</div>
-          <h1>Payment</h1>
-          <h3>
-            Our payment process is  simple and transparent. Track your ride
-            costs, view tariffs, and conveniently settle your account through
-            our secure payment options.
-          </h3>
-        </div>
+      <div class="col-md-6 hero-right text-center">
+        <img src="bycicle1.png" alt="Bicycle" class="img-fluid">
+        <!-- <img src="young-modern-woman-riding-bicycle-600nw-1971529970-removebg-preview.png" alt="Cyclist" class="img-fluid"> -->
       </div>
     </div>
-  </body>
+
+    <div class="row between">
+      <h1 class="display-4">PEDALNOW</h1>
+      <h1 class="display-4 font-weight-bold">PEDALNOW</h1>
+      <h1 class="display-4">PEDALNOW</h1>
+      <h1 class="display-4 font-weight-bold">PEDALNOW</h1>
+    </div>
+
+    <div class="row no-gutters all ml-0 mr-0">
+      <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  <title>Flexbox Layout</title>
+</head>
+<body>
+
+  <div class="container">
+    <div class="line"></div>
+    <div class="flex-container flx1">
+      <div class="box box1">
+        <img src="./login.png" alt="Login" class="img-fluid">
+      </div>
+      <div class="box box6">
+        <div class="circle bg-primary text-white">1</div>
+        <h1 class="display-4">Sign up process</h1>
+        <h3 class="lead">Simply create an account, and you'll be ready to explore our bike-sharing service in no time.</h3>
+      </div>
+    </div>
+
+    <div class="flex-container flx2">
+      <div class="box box2">
+        <div class="circle bg-primary text-white">2</div>
+        <h1 class="display-4">Bike Reservation</h1>
+        <h3 class="lead">Bike reservation made simple. Locate available bikes, select your preferred model, and reserve it through our user-friendly platform.</h3>
+      </div>
+      <div class="box box7">
+        <img src="./map1.webp" alt="Map" class="img-fluid">
+      </div>
+    </div>
+
+    <div class="flex-container flx3">
+      <div class="box box3">
+        <img src="./unlock.png" alt="Unlock" class="img-fluid">
+      </div>
+      <div class="box box8">
+        <div class="circle bg-primary text-white">3</div>
+        <h1 class="display-4">Starting Your Ride</h1>
+        <h3 class="lead">Unlock your reserved bike using our app or a provided code, and enjoy the freedom of cycling through the city.</h3>
+      </div>
+    </div>
+
+    <div class="flex-container flx4">
+      <div class="box box4">
+        <div class="circle bg-primary text-white">4</div>
+        <h1 class="display-4">Cycling and Bike Return</h1>
+        <h3 class="lead">Unlock your bike, embark on your journey, and conveniently return it to any designated station when you're done.</h3>
+      </div>
+      <div class="box box9">
+        <img src="./bycicle.png" alt="Bicycle" class="img-fluid">
+      </div>
+    </div>
+
+    <div class="flex-container flx5">
+      <div class="box box5">
+        <img src="./paying.png" alt="Paying" class="img-fluid">
+      </div>
+      <div class="box box10">
+        <div class="circle bg-primary text-white">5</div>
+        <h1 class="display-4">Payment</h1>
+        <h3 class="lead">Our payment process is simple and transparent. Track your ride costs, view tariffs, and conveniently settle your account through our secure payment options.</h3>
+      </div>
+    </div>
+
+  </div>
+
+</body>
+</html>
+
+    </div>
+    
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
 </html>
