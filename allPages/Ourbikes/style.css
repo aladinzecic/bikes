@@ -9,6 +9,7 @@
     height: 430vh;
     width: 100%;
     background-color: black;
+    overflow: hidden;
 }
 .our-bikes h2{
     color: #fff;
@@ -23,6 +24,7 @@
   height: 100vh;
   display: flex;
   flex-direction: column;
+  background-color: black;
 }
 .frame,
 .wheel,
@@ -31,45 +33,6 @@
 }
 .full-bike {
   align-items: center;
-}
-.frame {
-  justify-content: start;
-  background: url(./frame.jpg) no-repeat;
-  background-size: 25%;
-
-  background-position: 25% 70%;
-  background-color: black;
-  align-items: center;
-}
-
-.frame h2,.handlebar h2 {
-  color: #ffffff;
-  margin: 20px auto;
-}
-.frame h1, .wheel h1,.handlebar h1 {
-  color: #ffffff;
-  font-size: 50px;
-  transform: scale(1.3);
-}
-.frame-text, .wheel-text {
-  width: 50%;
-  margin-top: 10%;
-  height: 30%;
-}
-.frame-text{
-    margin-left: 13%;
-
-}
-.frame-text .right {
-  width: 55%;
-  margin-left: auto;
-}
-.frame-text .right h3,.wheel .left h3 {
-  color: #fff;
-  font-size: 20px;
-  line-height: 40px;
-  margin-top: 50px;
-  transform: scale(1.2);
 }
 .full-bike h2 {
   color: #ffffff;
@@ -90,35 +53,264 @@
   z-index: 10;
   transform: scale(4, 1.6);
 }
-
-
-.wheel{
-    height: 100vh;
-    background:url(./wheel.jpg) no-repeat;
-    background-size: 25%;
-
-    background-position: 75% 200px;
-    background-color: black;
+.frame , .wheel, .handlebar {
+  justify-content: start;
+  align-items: center;
+overflow-x: hidden;
 }
+
+
+.frame h2,.handlebar h2 {
+  color: #ffffff;
+  margin: 20px auto;
+}
+.frame h1, .wheel h1,.handlebar h1 {
+  color: #ffffff;
+  font-size: 50px;
+  transform: scale(1.3);
+  text-align: center;
+}
+.frame-text, .wheel-text {
+  width: 80%;
+  margin-top: 10%;
+  height: 30%;
+}
+.frame-text,.wheel-text{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+.frame-text .left{
+  width: 25%;
+  height: 50vh;
+  display: flex;
+  align-items: center;
+}
+.frame-text .left img{
+  height: 100%;
+}
+
+.frame-text .right {
+  display: flex;
+  align-items: center;
+  width: 35%;
+  height: 50vh;
+  margin-top: 0;
+
+}
+#handlebar{
+  width: 100%;
+  height: auto;
+}
+#handle-bar-right{
+  width: 30%;
+  margin-left: 5%;
+}
+.frame-text .right h3,.wheel .left h3 {
+  color: #fff;
+  font-size: 20px;
+  line-height: 40px;
+  transform: scale(1.2);
+}
+
+
 .wheel h1{
     margin: 30px auto;
-
-}
-.wheel .left{
-    width: 60%;
-    margin-left: auto;
-}
-#blob{
-  width: 25%;
-  position: absolute;
-  right: 100px;
-  top: 520px;
+    width: 100vw;
 }
 
-.handlebar{
-    background: url(./handlebar.png) no-repeat;
-    background-size: 35%;
-    background-position: 25% 50%;
-    background-color: black;
-    align-items: center;
+.wheel-text .left{
+  width: 30%;
+  height: 50vh;
+  display: flex;
+  align-items: center;
 }
+.wheel-text .right{
+  width: 30%;
+  height: 50vh;
+  display: flex;
+  align-items: center;
+  margin-left: 5%;
+
+}
+.wheel-text .right img{
+  height: 100%;
+}
+
+
+
+
+
+@media (max-width: 1100px) {
+  .our-bikes h2{
+    font-size: 18px;
+}
+
+  .full-bike h1 {
+    font-size: 50px;
+  }
+  .full-bike img {
+    width: 75%;
+margin-top: 100px;
+  }
+.frame-text .right h3,.wheel-text .left h3{
+  font-size: 18px;
+}
+.frame-text h1,.wheel-text h1{
+  font-size: 18px;
+}
+
+.frame img,.wheel img, .handlebar img{
+  transform: scale(1);
+}
+.frame-text .right{
+  margin-left: 13%;
+}
+.frame h1, .wheel h1,.handlebar h1 {
+  font-size: 30px;
+
+}
+#handlebar{
+  height: 60%;
+  width: auto;
+}
+#handle-bar-right{
+  margin-left: 13%;
+}
+}
+@media (max-width: 700px) {
+  .our-bikes h2{
+    font-size: 16px;
+    padding-top: 40px;
+}
+.full-bike{
+  height: 100vh;
+}
+  .full-bike h1 {
+    font-size: 40px;
+  }
+  .full-bike img {
+    width: 80%;
+margin-top: 100px;
+  }
+.wheel,
+.handlebar,.frame{
+    margin-top: 0vh;
+    height: 120vh;
+}
+.frame{
+  margin-top: 0px;
+}
+.full-bike{
+  height: 70vh;
+}
+.frame h1, .wheel h1,.handlebar h1 {
+  font-size: 20px;
+  margin-bottom: 0;
+  margin-top: 10vh;
+}
+.frame-text, .wheel-text{
+  flex-direction: column;
+  height: 85vh;
+}
+.wheel-text{
+  flex-direction: column-reverse;
+}
+.frame-text .left, .frame-text .right, .wheel-text .left, .wheel-text .right{
+  width: 100%;
+  height: 50vh;
+  display: flex;
+  justify-content: center;
+  margin-left: 0px;
+
+}
+.frame-text .right h3,.wheel-text .left h3{
+  font-size: 17px;
+  width: 50%;
+  text-align: center;
+}
+
+.frame img,.wheel img, .handlebar img{
+  transform: scale(0.9);
+}
+.handlebar .frame-text .right{
+  width: 100%;
+}
+
+#handle-bar-right{
+  width: 100%;
+  margin-left: 0;
+}
+#handlebar{
+  width: 60%;
+  height: auto;
+}
+.our-bikes{
+  height: 440vh;
+
+}
+}
+
+
+
+
+@media (max-width: 570px) {
+  .our-bikes h2{
+    font-size: 14px;
+}
+
+  .full-bike h1 {
+    font-size: 30px;
+  }
+  .full-bike img {
+    width: 80%;
+margin-top: 100px;
+  }
+.frame-text .right h3,.wheel-text .left h3{
+  font-size: 14px;
+}
+
+.frame img,.wheel img, .handlebar img{
+  transform: scale(0.8);
+}
+
+#handlebar{
+  width: 60%;
+}
+}
+
+
+
+@media (max-width: 426px) {
+  .our-bikes h2{
+    font-size: 14px;
+}
+
+  .full-bike h1 {
+    font-size: 20px;
+  }
+  .full-bike img {
+    width: 75%;
+margin-top: 100px;
+  }
+.frame-text .right h3,.wheel-text .left h3{
+  font-size: 14px;
+}
+.frame-text h1,.wheel-text h1{
+  font-size: 18px;
+}
+
+.frame img,.wheel img, .handlebar img{
+  transform: scale(0.7);
+}
+
+#handlebar{
+  width: 60%;
+}
+}
+
+
+
+
+
+
