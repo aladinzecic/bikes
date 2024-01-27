@@ -74,8 +74,6 @@ document.addEventListener("DOMContentLoaded", function () {
       return response.json();
     })
     .then(data => {
-      // Use the JSON data here
-      console.log(data.users);
       users=data.users
 
     })
