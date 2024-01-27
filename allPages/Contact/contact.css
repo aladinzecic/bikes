@@ -4,13 +4,17 @@
   box-sizing: border-box;
   font-family: "Oswald", sans-serif;
 }
-
+body{
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
 .full-page {
   position: relative;
   overflow: hidden;
   z-index: 1;
   background-color: rgba(15, 19, 25, 255);
-
+width: 100%;
   height: 100vh; /* Set the height of the container */
 }
 
@@ -98,7 +102,7 @@ input:focus ~ .floating-label,
 input:not(:focus):valid ~ .floating-label,
 textarea:focus ~ .floating-label,
 textarea:not(:focus):valid ~ .floating-label {
-  top: -15px;
+  top: -18px;
   bottom: 10px;
   left: 20px;
   font-size: 11px;
@@ -126,7 +130,7 @@ textarea:not(:focus):valid ~ .floating-label {
   font-weight: 600;
   font-size: 14px;
   left: 20px;
-  top: 14px;
+  top: 10px;
   transition: 0.2s ease all;
   color: #d3bebe;
 }
@@ -149,4 +153,104 @@ svg {
 }
 svg:nth-child(2) {
   bottom: -20px;
+}
+#active{
+  color: #fff;
+}
+.nav{
+  height: 12vh;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: 1011;
+  display: flex;
+
+}
+.nav .left, .nav .right{
+  width: 50%;
+  display: flex;
+  align-items: center;
+  height: 12vh;
+}
+.nav .right{
+  justify-content: end;
+}
+.right ul{
+  margin-right: 10%;
+  width: 70%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-bottom: 0;
+}
+ul li{
+list-style: none;}
+
+.right ul li a{
+  text-decoration: none;
+  color: #12b7d4;
+}
+.login-menu{
+  background-color: #12b7d4;
+  width: 100%;
+  position: absolute;
+  z-index: 10;
+  height: 100vh;
+  margin-left: 100%;
+  transition: 1s;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+.centered{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  height: 50%;
+  width: 100%;
+}
+#active1{
+  color: #fff;
+}
+.login-menu a{
+color: #000;
+text-decoration: none;
+font-weight: 600;
+font-size: 26px;
+}
+.mobile{
+  height: 5vh;
+  width: 6vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  margin-right: 10%;
+  display: none;
+}
+.mobile .longer{
+  width: 90%;
+  height: 2px;
+  margin-left: 10%;
+  background-color: #fff;
+  transition: 1s;
+}
+.mobile .shorter{
+  width: 60%;
+  height: 2px;
+  margin-left: 10%;
+  transition: 1s;
+
+  background-color: #fff;
+}
+
+
+@media (max-width:768px){
+  .right ul{
+    display: none;
+  }
+  .mobile{
+    display: flex;
+  }
 }

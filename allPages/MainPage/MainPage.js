@@ -1,4 +1,3 @@
-
 const btn=document.getElementById('nav-mobile')
 const divv=document.getElementById('login-menu')
 const shorter=document.querySelector(".shorter")
