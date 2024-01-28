@@ -33,6 +33,12 @@ body {
   justify-content: end;
   
 }
+.nav .left{
+  padding-left: 10%;
+}
+.left img{
+  height: 12vh;
+}
 .right ul{
   margin-right: 10%;
   width: 70%;

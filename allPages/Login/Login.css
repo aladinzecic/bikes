@@ -7,6 +7,12 @@
   body{
     overflow: hidden;
   }
+  .nav .left{
+    padding-left: 10%;
+  }
+  .left img{
+    height: 12vh;
+  }
   .hero {
     height: 100vh;
     width: 100%;

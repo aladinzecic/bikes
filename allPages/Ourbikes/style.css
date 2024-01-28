@@ -8,6 +8,12 @@ body{
   width: 100%;
   overflow-x: hidden;
 }
+.nav .left{
+  padding-left: 10%;
+}
+.left img{
+  height: 12vh;
+}
 .our-bikes{
     height: 430vh;
     width: 100%;

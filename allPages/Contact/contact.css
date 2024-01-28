@@ -9,6 +9,12 @@ body{
   height: 100vh;
   overflow: hidden;
 }
+.nav .left{
+  padding-left: 10%;
+}
+.nav .left img{
+  height: 12vh;
+}
 .full-page {
   position: relative;
   overflow: hidden;
