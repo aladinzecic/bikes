@@ -25,3 +25,25 @@ btn.addEventListener('click',()=>{
     isMenuOn=!isMenuOn
     console.log(111)
 })
+
+
+
+const remove = document.getElementById("login-remove");
+const remove1 = document.getElementById("login-remove1");
+
+function updateNavigation() {
+    if (localStorage.getItem('loggedInUser')) {
+        remove.style.display = 'none';
+        remove1.style.display = 'none';
+    } else {
+        remove.style.display = 'inline-block';
+    }
+}
+
+window.addEventListener('storage', function(event) {
+    if (event.key === 'loggedInUser') {
+        updateNavigation();
+    }
+});
+
+updateNavigation();

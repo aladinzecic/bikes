@@ -41,6 +41,7 @@ usernameEl.addEventListener('input', () => {
       usernameValidationMessageDiv.appendChild(newh4);
     }
     else if(hash(passwordValue)!==user.password){
+      console.log(hash(passwordValue))
         usernameValidationMessageDiv.innerText=""
         passwordValidationMessageDiv.innerText=""
         const newh4 = document.createElement("h4");
@@ -55,7 +56,7 @@ usernameEl.addEventListener('input', () => {
         passwordValidationMessageDiv.innerText=""
         usernameValidationMessageDiv.innerText=""
         localStorage.setItem("loggedInUser", usernameValue);
-        document.location.href='../MainPage/MainPage.html'
+        document.location.href='../MainPage/index.html'
     }
 })
 
