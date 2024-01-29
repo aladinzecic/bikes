@@ -7,12 +7,13 @@
 body{
   width: 100%;
   overflow-x: hidden;
+  position: relative;
 }
 .nav .left{
   padding-left: 10%;
 }
 .left img{
-  height: 12vh;
+  height: 8vh;
 }
 .our-bikes{
     height: 430vh;
@@ -157,7 +158,6 @@ overflow-x: hidden;
   position: absolute;
   top: 0;
   width: 100%;
-  z-index: 1011;
   display: flex;
 }
 .nav .left, .nav .right{
@@ -242,7 +242,17 @@ font-size: 26px;
   background-color: #fff;
 }
 
-
+.footer{
+  width: 100%;
+  height: 8vh;
+  position: absolute;
+  bottom: 1vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 3;
+  color: #fff;
+}
 
 
 
@@ -396,7 +406,9 @@ margin-top: 100px;
   .our-bikes h2{
     font-size: 14px;
 }
-
+.footer{
+  bottom: 0;
+}
   .full-bike h1 {
     font-size: 20px;
   }

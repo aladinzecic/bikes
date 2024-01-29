@@ -7,6 +7,7 @@ body {
   background-color: black;
   font-family: "Oswald", sans-serif;
   overflow-x: hidden;
+  position: relative;
 }
 .container-fluid{
   width: 100%;
@@ -21,7 +22,10 @@ body {
   position: absolute;
   top: 0;
   width: 100%;
-  z-index: 1011;
+}
+.nav ul{
+  z-index: 11;
+
 }
 .nav .left, .nav .right{
   width: 50%;
@@ -37,7 +41,7 @@ body {
   padding-left: 10%;
 }
 .left img{
-  height: 12vh;
+  height: 8vh;
 }
 .right ul{
   margin-right: 10%;
@@ -98,12 +102,14 @@ font-size: 26px;
   margin-left: 10%;
   background-color: #000;
   transition: 1s;
+  z-index: 101;
 }
 .mobile .shorter{
   width: 60%;
   height: 2px;
   margin-left: 10%;
   transition: 1s;
+  z-index: 101;
 
   background-color: #000;
 }
@@ -153,14 +159,14 @@ margin-top: 25px;
 .hero-left h1 {
   width: 63%;
   color: #12b7d4;
-transform: scale(1.1,2.2);
+transform: scale(1.1,1.5);
 font-size: 34px;
   font-weight: 200;
 }
 .hero-left h3 {
   margin-top: 6vh;
   width: 63%;
-  transform: scale(1.08,1.5);
+  transform: scale(1.08,1.2);
 
   color: #12b7d4;
 
@@ -172,7 +178,7 @@ font-size: 34px;
 .between {
   margin-top: -10.5vh;
   height: 16vh;
-  width: 100vw;
+  width: 105vw;
   transform: rotate(-3deg);
   background-color: #12b7d4;
   display: flex;
@@ -274,9 +280,38 @@ font-size: 34px;
   flex-direction: column;
 }
 
-
+.footer{
+  width: 100%;
+  height: 8vh;
+  position: absolute;
+  bottom: -18vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 @media (max-width: 768px) {
+  .between h1 {
+    color: #000;
+    font-size: 34px;
+    font-weight: 300;
+  }
+.hero{
+  flex-direction: column;
+}
+  .hero-left {
+    margin-top: 20vh;
+    width: 100%;
+    height: 35vh;
 
+  }
+  .hero-right {
+    width: 100%;
+    height: 50vh;
+
+  }
+  .hero-right img{
+    transform: scale(0.6);
+  }
   .right ul{
     display: none;
   }
@@ -308,7 +343,7 @@ flex-direction: column-reverse;
 }
 .line{
   left: 7%;
-  height: 490vh;
+  height: 500vh;
 }
 
 .box9 img,
@@ -318,4 +353,21 @@ flex-direction: column-reverse;
 .box h1{
   text-align: center;
 }
+}
+@media (max-width:550px){
+
+  .between h1 {
+    font-size: 28px;
+  }
+}
+@media (max-width:425px){
+  .between h1 {
+    font-size: 20px;
+  }
+  .hero-left h1 {
+  font-size: 24px;
+  }
+  .hero-left h3 {
+    font-size: 16px;
+  }
 }

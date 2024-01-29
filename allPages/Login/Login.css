@@ -9,9 +9,10 @@
   }
   .nav .left{
     padding-left: 10%;
+z-index: 99;
   }
   .left img{
-    height: 12vh;
+    height: 8vh;
   }
   .hero {
     height: 100vh;
@@ -124,7 +125,7 @@
     background-color: #12b7d4;
     width: 100%;
     position: absolute;
-    z-index: 1000;
+    z-index: 1002;
     height: 100vh;
     margin-left: 100%;
     transition: 1s;
@@ -165,13 +166,16 @@
     margin-left: 10%;
     background-color: #fff;
     transition: 1s;
+    z-index: 101;
+
   }
   .mobile .shorter{
     width: 60%;
     height: 2px;
     margin-left: 10%;
     transition: 1s;
-  
+    z-index: 101;
+
     background-color: #fff;
   }
   .nav{
@@ -180,7 +184,6 @@
     position: absolute;
     top: 0;
     width: 100%;
-    z-index: 1011;
   }
   .nav .left, .nav .right{
     width: 50%;
@@ -190,7 +193,7 @@
   }
   .nav .right{
     justify-content: end;
-    
+    z-index: 1003;
   }
 
   .right ul{
