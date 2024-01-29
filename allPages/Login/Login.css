@@ -152,6 +152,21 @@ z-index: 99;
   font-weight: 600;
   font-size: 26px;
   }
+  #google_translate_element{
+    width: 70px;
+    height: 20px;
+    overflow: hidden;
+    cursor: pointer;
+    margin-top: -7px;
+  }
+  #google_translate_element select{
+    background-color: transparent;
+    color: #12b7d4;
+    font-size: 16px;
+    border: 0px;
+  
+    cursor: pointer;
+  }
   .mobile{
     height: 5vh;
     width: 6vh;

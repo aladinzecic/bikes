@@ -83,6 +83,19 @@ body{
     z-index: 101;
     overflow-y: auto;
 }
+#google_translate_element{
+  width: 70px;
+  height: 20px;
+  overflow: hidden;
+  cursor: pointer;
+}
+#google_translate_element select{
+  background-color: transparent;
+  color: #12b7d4;
+  border: 0px;
+  cursor: pointer;
+
+}
 .login-menu{
     background-color: #12b7d4;
     width: 100%;

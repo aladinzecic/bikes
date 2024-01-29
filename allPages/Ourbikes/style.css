@@ -169,17 +169,19 @@ overflow-x: hidden;
   z-index: 1112;
 }
 #google_translate_element{
-  width: 50px;
+  width: 70px;
   height: 20px;
   overflow: hidden;
   cursor: pointer;
+  margin-top: -7px;
 }
 #google_translate_element select{
-  background-color: #000;
+  background-color: transparent;
   color: #12b7d4;
+  font-size: 16px;
   border: 0px;
-  cursor: pointer;
 
+  cursor: pointer;
 }
 
   .right ul{
