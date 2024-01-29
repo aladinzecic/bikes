@@ -2,7 +2,67 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: "Oswald", sans-serif;
+
 }
+body{
+    overflow-x: hidden;
+}
+.nav{
+    height: 12vh;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    display: flex;
+    width: 100%;
+  }
+  .nav .left{
+    z-index: 11;
+  }
+  .nav ul{
+    display: flex;
+    z-index: 11;
+  
+  }
+  .nav .left, .nav .right{
+    width: 50%;
+    display: flex;
+    align-items: center;
+    height: 12vh;
+  }
+  .nav .right{
+    justify-content: end;
+  }
+  .right ul{
+    margin-right: 10%;
+    width: 70%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-bottom: 0;
+  }
+  #active{
+    color: #fff;
+  }
+  #active1{
+    color: #fff;
+  }
+  ul li{
+  list-style: none;}
+  
+  .right ul li a{
+    text-decoration: none;
+    color: #12b7d4;
+
+  }
+  .nav .left{
+    padding-left: 10%;
+  }
+  .nav .left img{
+    height: 8vh;
+    position: relative;
+    z-index: 1;
+  }
 #map {
     position: absolute;
     top: 0;
@@ -15,13 +75,40 @@
   }
 .search{
     position: absolute;
-    top: 40px;
+    top: 70px;
     right: 40px;
     width: 25vw;
     height: 240px;
     z-index: 101;
     overflow-y: auto;
 }
+.login-menu{
+    background-color: #12b7d4;
+    width: 100%;
+    position: absolute;
+    z-index: 10;
+    height: 100vh;
+    margin-left: 100%;
+    transition: 1s;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+  }
+  .centered{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    height: 50%;
+    width: 100%;
+  }
+  .login-menu a{
+  color: #000;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 26px;
+  }
 .search input{
     width: 96%;
     height: 40px;
@@ -61,7 +148,43 @@
     cursor: pointer;
     z-index: 100;
 }
+.mobile{
+    height: 5vh;
+    width: 6vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    margin-right: 5%;
+    margin-top: 7vh;
+    display: none;
+  }
+.mobile .longer{
+    width: 90%;
+    height: 2px;
+    margin-left: 10%;
+    background-color: #fff;
+    transition: 1s;
+    z-index: 101;
 
+  }
+  .mobile .shorter{
+    width: 60%;
+    height: 2px;
+    margin-left: 10%;
+    transition: 1s;
+    z-index: 101;
+
+    background-color: #fff;
+  }
+@media (max-width:768px){
+    .nav .right ul{
+      display: none;
+    }
+    .mobile{
+      display: flex;
+    }
+
+  }
 @media  (max-width:500px) {
     .search{
         top: 30px;

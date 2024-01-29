@@ -12,8 +12,40 @@
      crossorigin=""></script>
     <script src="./Map.js" defer></script>
     <link rel="stylesheet" href="./Map.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Oswald&display=swap"
+      rel="stylesheet"
+    />
 </head>
 <body>
+    <div class="login-menu" id="login-menu">
+        <div class="centered">
+          <a href="#">HOME</a>
+        <a id="login-remove1" href="../Login/index.html">LOGIN</a>
+        <a href="../Ourbikes/index.html">OUR BIKES</a>
+        <a href="../Contact/index.html">CONTACT US</a>
+        <a href="../Map/index.html" id="active1">MAP</a>
+        </div>
+    </div>
+    <div class="nav">
+        <div class="left"><img src="./logo.png" alt="" srcset=""></div>
+        <div class="right">
+          <ul>
+            <li><a href="#">Home</a></li>
+            <li id="login-remove"><a href="../Login/index.html">Login</a></li>
+            <li><a href="../Ourbikes/index.html">Our bikes</a></li>
+            <li><a href="../Contact/index.html">Contact us</a></li>
+            <li><a href="../Map/index.html" id="active">Map</a></li>
+    
+          </ul>
+          <div class="mobile" id="nav-mobile">
+            <div class="longer"></div>
+            <div class="shorter"></div>
+          </div>
+        </div>
+      </div>
     <div class="search" id="searchDiv">
 
         <input type="text" id="search" placeholder="Type a city"><span id="span">X</span>
