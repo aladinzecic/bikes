@@ -11,6 +11,12 @@
       integrity="sha512-…"
       crossorigin="anonymous"
     />
+    <!-- Include Toastify CSS -->
+<link href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css" rel="stylesheet">
+
+<!-- Include Toastify JavaScript -->
+<script src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -64,21 +70,26 @@
         <div class="right-div">
           <div class="right">
             <div class="cont">
-              <input type="text" class="inputText" required />
+              <input type="text" id="fullName" class="inputText" required />
               <span class="floating-label">Full Name</span>
+              <div class="error" id="fullNameError"></div>
+
             </div>
   
             <div class="cont">
-              <input type="text" class="inputText" required />
+              <input type="text" id="email" class="inputText" required />
               <span class="floating-label">Email</span>
+              <div class="error" id="emailError"></div>
+
             </div>
 
   
             <div class="cont">
-              <textarea class="inputText" required></textarea>
+              <textarea class="inputText" id="message" required></textarea>
               <span class="floating-label">Message</span>
+              <div class="error" id="messageError"></div>
             </div>
-            <button type="submit">Submit</button>
+            <button type="submit" id="btn1">Submit</button>
           </div>
         </div>
       </div>
