@@ -14,6 +14,8 @@
     <link rel="stylesheet" href="./Map.css">
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <script src="http://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
     <link
       href="https://fonts.googleapis.com/css2?family=Oswald&display=swap"
       rel="stylesheet"
@@ -27,6 +29,8 @@
         <a href="../Ourbikes/index.html">OUR BIKES</a>
         <a href="../Contact/index.html">CONTACT US</a>
         <a href="../Map/index.html" id="active1">MAP</a>
+        <div id="google_translate_element"></div>
+
         </div>
     </div>
     <div class="nav">
@@ -38,7 +42,8 @@
             <li><a href="../Ourbikes/index.html">Our bikes</a></li>
             <li><a href="../Contact/index.html">Contact us</a></li>
             <li><a href="../Map/index.html" id="active">Map</a></li>
-    
+            <li><div id="google_translate_element"></div></li>
+
           </ul>
           <div class="mobile" id="nav-mobile">
             <div class="longer"></div>
@@ -54,6 +59,14 @@
 
     </div>
     <div id="map"></div>
+    <script type="text/javascript">
+      function googleTranslateElementInit() {
+        new google.translate.TranslateElement({
+          pageLanguage: 'en',
+          layout: google.translate.TranslateElement.InlineLayout.SIMPLE
+        }, 'google_translate_element');
+      }
+    </script>
 </body>
 </html>
 

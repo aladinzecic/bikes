@@ -12,6 +12,8 @@
       href="https://fonts.googleapis.com/css2?family=Oswald&display=swap"
       rel="stylesheet"
     />
+    <script src="http://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
   <script src="./MainPage.js" defer></script>
 </head>
 <body class="bg-black text-white">
@@ -22,6 +24,8 @@
       <a href="../Ourbikes/index.html">OUR BIKES</a>
       <a href="../Contact/index.html">CONTACT US</a>
       <a href="../Map/index.html">MAP</a>
+      <div id="google_translate_element"></div>
+
       </div>
   </div>
   <div class="nav">
@@ -33,6 +37,7 @@
         <li><a href="../Ourbikes/index.html">Our bikes</a></li>
         <li><a href="../Contact/index.html">Contact us</a></li>
         <li><a href="../Map/index.html">Map</a></li>
+        <li><div id="google_translate_element"></div></li>
 
       </ul>
       <div class="mobile" id="nav-mobile">
@@ -133,5 +138,13 @@
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <script type="text/javascript">
+    function googleTranslateElementInit() {
+      new google.translate.TranslateElement({
+        pageLanguage: 'en',
+        layout: google.translate.TranslateElement.InlineLayout.SIMPLE
+      }, 'google_translate_element');
+    }
+  </script>
 </body>
 </html>

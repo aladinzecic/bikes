@@ -70,6 +70,7 @@ list-style: none;}
   justify-content: space-around;
   align-items: center;
 }
+
 .centered{
   display: flex;
   flex-direction: column;
