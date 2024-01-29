@@ -35,24 +35,6 @@ width: 100%;
   height: 100vh;
   z-index: -1; /* Move the pseudo-element behind the content */
 }
-#img1 {
-  position: absolute;
-  bottom: 200px;
-  z-index: 100;
-  height: 250px;
-  filter: none;
-  right: 60px;
-  filter: brightness(0.6);
-
-}
-#img2 {
-  position: absolute;
-  bottom: 200px;
-  z-index: 100;
-  height: 150px;
-  filter: brightness(0.3);
-  right: 40px;
-}
 
 .down {
   height: 50vh;
@@ -80,8 +62,8 @@ width: 100%;
   justify-content: space-around;
 }
 
-.left img {
-  height: 250px;
+.left-div .left img {
+  width: 150%;
 }
 .left h2 {
   margin-top: 10px;
@@ -100,7 +82,7 @@ width: 100%;
 .right textarea {
   background-color: rgba(16, 16, 16, 255);
   border: 1px solid rgb(139, 127, 127);
-  height: 60px;
+  height: 70px;
   resize: none;
   width: 250px;
   font-weight: 500;
@@ -280,6 +262,93 @@ font-size: 26px;
   color: #fff;
 }
 @media (max-width:768px){
+  .down{
+    margin-left: 4vw;
+  }
+  .right ul{
+    display: none;
+  }
+  .mobile{
+    display: flex;
+  }
+}
+@media (max-width:600px){
+  .down{
+    height: 80vh;
+
+    flex-direction: column;
+    margin-top: 12vh;
+    margin-left: 0;
+    width: 100%;
+  }
+  .full-page .down .left-div{
+    width: 100%;
+    height: 40vh;
+
+  }
+  .full-page .down .left-div .left{
+    width: 100%;
+    display: flex;
+    align-items: center;
+  }
+  .left-div .left img{
+    width: 50%;
+  }
+  .full-page .down .right-div .right{
+    width: 100%;
+    display: flex;
+align-items: center;
+  }
+  .full-page .down .right-div{
+    width: 100%;
+    height: 40vh;
+  }
+  .left h2 {
+    margin-top: 5px;
+    font-size: 10px;
+  }
+  .right input {
+    height: 25px;
+    width: 45vw;
+  }
+  .right textarea {
+
+    height: 50px;
+    width: 45vw;
+  }
+  
+  input:focus ~ .floating-label,
+  input:not(:focus):valid ~ .floating-label,
+  textarea:focus ~ .floating-label,
+  textarea:not(:focus):valid ~ .floating-label {
+    top: -15px;
+    bottom: 10px;
+    left: 10px;
+    font-size: 10px;
+    opacity: 1;
+    color: #d3bebe;
+  }
+  
+
+  
+  
+  .floating-label {
+    font-size: 10px;
+    left: 10px;
+    top: 4px;
+    transition: 0.2s ease all;
+    color: #d3bebe;
+  }
+  
+  .right button {
+    width: 45vw;
+    height: 25px;
+    font-size: 12px;
+    font-weight: 600;
+    background-color: #d3bebe;
+    cursor: pointer;
+    border: 0px;
+  }
   .right ul{
     display: none;
   }
